@@ -6,10 +6,10 @@ Wants=network-online.target
 [Service]
 Type=simple
 User=van
-WorkingDirectory=/home/van/src_survival
+WorkingDirectory=./src_survival
 Environment=PYTHONUNBUFFERED=1
 Environment=SURVIVAL_PORT=9082
-ExecStart=/home/van/src_survival/.venv/bin/survival-api
+ExecStart=./src_survival/.venv/bin/survival-api
 Restart=on-failure
 RestartSec=3
 NoNewPrivileges=true
