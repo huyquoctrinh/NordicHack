@@ -16,6 +16,10 @@ The packaged planner previously averaged 1,058 over six local seeds with a minim
 of 949. Those measurements are evidence, not a guaranteed remote score or a claim
 that the 2,500 target has been achieved.
 
+## Algorithm
+
+For algorithm, please refer to our ```src/``` folder, we do brute-force for different hyperparameter and constraint. Moreover, we think a hyperparameter + constraint search inspired by efficientnet to choose the best heuristic function and hyperparam
+
 ## Repository layout
 
 ```text
