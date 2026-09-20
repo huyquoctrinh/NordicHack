@@ -1,4 +1,4 @@
-# Medical appointment — second place
+# Medical appointment
 
 
 Faster Whisper `base` produces word-level timestamps. Gemma 4 E4B-it answers all ten questions in one pass and returns verbatim evidence; fuzzy alignment maps each quote back to its audio span.
