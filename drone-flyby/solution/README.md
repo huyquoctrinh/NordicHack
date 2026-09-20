@@ -192,6 +192,5 @@ Best results on the tiled dataset (480×540 tiles):
 
 | Model | mAP50 | Epochs |
 |---|---|---|
-| yolov26s | 0.834 | 32 |
 | yolov26x-world | 0.787 | 170 |
 | yolov8x-world | 0.771 | 200 |
