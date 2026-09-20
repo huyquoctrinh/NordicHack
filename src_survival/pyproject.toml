@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "survival-agent"
+version = "1.0.0"
+description = "Joint food-and-safety controller, API, evaluator, and staged tuner"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi==0.121.2",
+  "pydantic==2.12.4",
+  "uvicorn[standard]==0.38.0",
+]
+
+[project.optional-dependencies]
+search = [
+  "numpy==2.3.5",
+  "pygame==2.6.1",
+  "scipy==1.16.3",
+  "Shapely==2.1.2",
+]
+
+[project.scripts]
+survival-api = "survival_agent.cli:api"
+survival-evaluate = "search_engine.evaluate:main"
+survival-tune = "search_engine.tune:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

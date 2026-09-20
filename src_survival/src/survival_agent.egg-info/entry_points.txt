@@ -1,0 +1,4 @@
+[console_scripts]
+survival-api = survival_agent.cli:api
+survival-evaluate = search_engine.evaluate:main
+survival-tune = search_engine.tune:main

@@ -1,0 +1,8 @@
+{
+  "agent_observations": 333523,
+  "matched_observations": 50013,
+  "motion_prediction_mean_error": 1.750274309440423,
+  "stationary_prediction_mean_error": 6.9728176205270715,
+  "units": "distance per tick",
+  "caveat": "Heuristic unlabeled associations; errors include collisions and unobserved terrain. This is not a survival score."
+}

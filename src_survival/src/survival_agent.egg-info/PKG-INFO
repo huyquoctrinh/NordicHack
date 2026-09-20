@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: survival-agent
+Version: 1.0.0
+Summary: Joint food-and-safety controller, API, evaluator, and staged tuner
+Requires-Python: >=3.10
+Requires-Dist: fastapi==0.121.2
+Requires-Dist: pydantic==2.12.4
+Requires-Dist: uvicorn[standard]==0.38.0
+Provides-Extra: search
+Requires-Dist: numpy==2.3.5; extra == "search"
+Requires-Dist: pygame==2.6.1; extra == "search"
+Requires-Dist: scipy==1.16.3; extra == "search"
+Requires-Dist: Shapely==2.1.2; extra == "search"
