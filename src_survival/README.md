@@ -49,7 +49,7 @@ the Survival Simulator. The HTTP API does not import simulator internals or need
 the optional scientific packages.
 
 ```bash
-cd /home/van/src_survival
+cd ./src_survival
 python3 -m venv .venv
 .venv/bin/pip install --upgrade pip
 .venv/bin/pip install -e .
@@ -65,8 +65,8 @@ simulator-side dependencies:
 For this machine, the existing environment can also be used for quick checks:
 
 ```bash
-PYTHONPATH=/home/van/src_survival/src \
-  /home/van/survival-agent-2/.venv/bin/python -m unittest discover -s tests -v
+PYTHONPATH=./src_survival/src \
+  ./survival-agent-2/.venv/bin/python -m unittest discover -s tests -v
 ```
 
 ## Run the API
@@ -74,7 +74,7 @@ PYTHONPATH=/home/van/src_survival/src \
 The default port is 9082.
 
 ```bash
-cd /home/van/src_survival
+cd ./src_survival
 SURVIVAL_PORT=9082 \
 .venv/bin/survival-api
 ```
@@ -120,9 +120,9 @@ Use full game horizons when comparing policies. Short screens cannot establish
 whether the colony survives long enough to approach the target.
 
 ```bash
-cd /home/van/src_survival
+cd ./src_survival
 .venv/bin/survival-evaluate \
-  --simulator /home/van/survival-simulator-3 \
+  --simulator ./survival-simulator-3 \
   --policy src/survival_agent/policies/joint_planner.py \
   --seeds 1 2 7 8 \
   --cap 3000 \
@@ -140,15 +140,15 @@ guarantee byte-for-byte deterministic results across isolated processes.
 The convenient five-hour command is:
 
 ```bash
-cd /home/van/src_survival
-./scripts/tune.sh /home/van/survival-simulator-3 5 runs/search-5h
+cd ./src_survival
+./scripts/tune.sh ./survival-simulator-3 5 runs/search-5h
 ```
 
 Direct command with explicit seed groups:
 
 ```bash
 .venv/bin/survival-tune \
-  --simulator /home/van/survival-simulator-3 \
+  --simulator ./survival-simulator-3 \
   --hours 5 \
   --out runs/search-5h \
   --development-seeds 1,2 \
@@ -166,7 +166,7 @@ cat runs/search-5h/status.json
 If launching manually in the background, redirect output yourself:
 
 ```bash
-nohup ./scripts/tune.sh /home/van/survival-simulator-3 5 runs/search-5h \
+nohup ./scripts/tune.sh ./survival-simulator-3 5 runs/search-5h \
   > runs/search-5h.runner.log 2>&1 &
 ```
 
@@ -178,7 +178,7 @@ configuration, output schema, and smoke-test command.
 ## Tests
 
 ```bash
-cd /home/van/src_survival
+cd src_survival/
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
