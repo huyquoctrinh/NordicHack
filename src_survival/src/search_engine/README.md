@@ -56,7 +56,7 @@ Install the repository in editable mode, then run:
 
 ```bash
 survival-tune \
-  --simulator /home/van/survival-simulator-3 \
+  --simulator ./survival-simulator-3 \
   --hours 5 \
   --cap 3000 \
   --out runs/search-5h
@@ -82,7 +82,7 @@ production policy:
 
 ```bash
 survival-tune \
-  --simulator /home/van/survival-simulator-3 \
+  --simulator ./survival-simulator-3 \
   --hours 0.03 \
   --cap 20 \
   --development-seeds 1 \
